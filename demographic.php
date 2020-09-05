@@ -28,8 +28,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
 
 $demo_full = array_map('str_getcsv', file("data/demographic_data.csv"));
 array_walk($demo_full, function(&$a) use ($demo_full) {
-      $a = array_combine($demo_full[0], $a);
-    });
+  $a = array_combine($demo_full[0], $a);
+});
 array_shift($demo_full); # remove column header
 
 $myfile = fopen("data/demographic_data.csv", "a") or die("Unable to open file!");

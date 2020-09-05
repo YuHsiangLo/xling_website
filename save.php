@@ -1,5 +1,5 @@
 <?php
-// Muaz Khan     - www.MuazKhan.com 
+// Muaz Khan     - www.MuazKhan.com
 // MIT License   - https://www.webrtc-experiment.com/licence/
 // Documentation - https://github.com/muaz-khan/RecordRTC
 
@@ -42,11 +42,11 @@ function selfInvoker()
         echo 'File name must start with "RecordRTC-"';
         return;
     }
-    
+
     $fileName = '';
     $tempName = '';
     $file_idx = '';
-    
+
     if (!empty($_FILES['audio-blob'])) {
         $file_idx = 'audio-blob';
         $fileName = $_POST['audio-filename'];
@@ -56,7 +56,7 @@ function selfInvoker()
         $fileName = $_POST['video-filename'];
         $tempName = $_FILES[$file_idx]['tmp_name'];
     }
-    
+
     if (empty($fileName) || empty($tempName)) {
         if(empty($tempName)) {
             error_log ('Invalid temp_name: '.$tempName);
@@ -85,12 +85,12 @@ function selfInvoker()
        return;
     }
     */
-    
+
     $filePath = 'uploads/' . $fileName;
-    
+
     //error_log("this is the file path:" . $filePath);
     //return
-    
+
     // make sure that one can upload only allowed audio/video files
     $allowed = array(
         'webm',
@@ -112,7 +112,7 @@ function selfInvoker()
         echo 'Problem saving file: '.$tempName;
         return;
     }
-    
+
     echo 'success';
 }
 
