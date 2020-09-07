@@ -182,26 +182,21 @@ require_once "language/".$lang."/main.php";
             <canvas id="analyser" width="1000" height="150"></canvas>
             <canvas id="wavedisplay" width="1000" height="150"></canvas>
             <div id="audioplayer"></div>
-<!--            <audio id="recorded-audio" controls="controls"></audio>-->
         </div>
         <div id="controls">
             <div id="buttons">
                 <div id="record-div" class="btntext">
                     <button id="recordButton" onclick="toggleRecording(document.getElementById('record'));" style="border: none; background-color: transparent;">
-<!--                    <a href="#" title="Click to start or stop recording" onclick="toggleRecording(document.getElementById('record'));">-->
                         <img id="record" src="images/mic128.png" width="70" height="70">
                         <br/>
                         <div id="rectext"><?php echo($langar['RecorderRec'])?></div>
-<!--                    </a>-->
                     </button>
                 </div>
                 <div id="save-div" class="btntext">
                     <button id="save" href="#" onclick="startSubmit(this);" style="border: none; background-color: transparent;" disabled>
-<!--                    <a id="save" href="#" onclick="startSubmit(this);">-->
                         <img src="images/save.svg" width="70" height="70">
                         <br/>
                         <?php echo($langar['RecorderSave'])?>
-<!--                    </a>-->
                     </button>
                 </div>
                 <h4 id="rectime"><time>00:00:00</time></h4>
@@ -214,13 +209,13 @@ require_once "language/".$lang."/main.php";
 </body>
 
 <script>
-    var h1 = document.getElementById('rectime'),
-        start = document.getElementById('record-div'),
-        cmpt = 0,
-        seconds = 0,
-        minutes = 0,
-        hours = 0,
-        t;
+    const h1 = document.getElementById('rectime');
+    const start = document.getElementById('record-div');
+    var recording_in_progress;
+    var seconds = 0;
+    var minutes = 0;
+    var hours = 0;
+    var t;
 
     function add() {
         seconds++;
@@ -239,30 +234,30 @@ require_once "language/".$lang."/main.php";
     function timer() {
         t = setTimeout(add, 1000);
     }
+
     timer();
 
-    window.onload=function()
-    {
+    window.onload = function() {
         clearTimeout(t);
         h1.textContent = "00:00:00";
         seconds = 0;
         minutes = 0;
         hours = 0;
+        recording_in_progress = false;
     }
     /* Start button */
     start.onclick = function() {
-        if (cmpt % 2 == 0) {
-            timer();
-        }
-        else {
+        if (recording_in_progress) {
             clearTimeout(t);
             h1.textContent = "00:00:00";
             seconds = 0;
             minutes = 0;
             hours = 0;
+            recording_in_progress = false;
+        } else {
+            timer();
+            recording_in_progress = true;
         }
-        cmpt++;
-
     }
 </script>
 
