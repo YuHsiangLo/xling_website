@@ -32,11 +32,26 @@ if (sizeof($consent_full) == 0) {
     //$last_code = (int) filter_var(array_count_values(array_column($consent_full, 'code'))[$language], FILTER_SANITIZE_NUMBER_INT);
     $curr_code = $last_code + 1;
 }
-fwrite($myfile, '"'.$name.'","'.$email.'","'.$language.$curr_code.'","'.$public.'"'."\n");
+
+//from: https://stackoverflow.com/questions/4356289/php-random-string-generator
+function generateRandomString($length = 10) {
+    $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
+    $charactersLength = strlen($characters);
+    $randomString = '';
+    for ($i = 0; $i < $length; $i++) {
+        $randomString .= $characters[rand(0, $charactersLength - 1)];
+    }
+    return $randomString;
+}
+
+$user_id = generateRandomString();
+//fwrite($myfile, '"'.$name.'","'.$email.'","'.$language.$curr_code.'","'.$public.'"'."\n");
+fwrite($myfile, '"'.$name.'","'.$email.'","'.$language.'_'.$user_id.'","'.$public.'"'."\n");
 fclose($myfile);
 
 session_start();
-$_SESSION["user_id"] = $language.$curr_code;
+//$_SESSION["user_id"] = $language.$curr_code;
+$_SESSION["user_id"] = $language.'_'.$user_id;
 $_SESSION['lang'] = $language;
 header('Location: demographic_questionnaire.php');
 ?>
