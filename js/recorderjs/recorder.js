@@ -108,15 +108,18 @@ DEALINGS IN THE SOFTWARE.
 
             function makeXMLHttpRequest(url, data, callback) {
                 var request = new XMLHttpRequest();
+
                 request.onreadystatechange = function() {
                     if (request.readyState == 4 && request.status == 200) {
-                        if(request.responseText === 'success') {
+                        console.log(request.responseText);
+                        if (request.responseText === 'success') {
                             callback('upload-ended');
                             return;
                         }
 
-                        document.querySelector('.header').parentNode.style = 'text-align: left; color: red; padding: 5px 10px;';
-                        document.querySelector('.header').parentNode.innerHTML = request.responseText;
+                        //console.log(document.querySelector('.header'))
+                        //document.querySelector('.header').parentNode.style = 'text-align: left; color: red; padding: 5px 10px;';
+                        //document.querySelector('.header').parentNode.innerHTML = request.responseText;
                     }
                 };
 
@@ -125,16 +128,17 @@ DEALINGS IN THE SOFTWARE.
                 };
 
                 request.upload.onprogress = function(event) {
-                    callback(array[1] + Math.round(event.loaded / event.total * 100) + "%");
+                    callback(array[1] + Math.round(event.loaded/event.total * 100) + "%");
                 };
 
                 request.upload.onload = function() {
                     callback(array[2]);
+                    //callback('upload-ended');
                 };
 
-                request.upload.onload = function() {
-                    callback(array[3]);
-                };
+                //request.upload.onload = function() {
+                //    callback(array[3]);
+                //};
 
                 request.upload.onerror = function(error) {
                     callback(array[4]);
@@ -161,9 +165,9 @@ DEALINGS IN THE SOFTWARE.
     console.log('Setting up Php Post');
     filename = "RecordRTC-" + user_id + "-" + filename;
     var formData = new FormData();
-    formData.append('audio' + '-filename', filename);
-    formData.append('audio' + '-blob', blob);
-    makeXMLHttpRequest('/save.php', formData, function(progress) {
+    formData.append('audio-filename', filename);
+    formData.append('audio-blob', blob);
+    makeXMLHttpRequest('save.php', formData, function(progress) {
         if (progress !== 'upload-ended') {
             callback(progress)
             return;
@@ -178,7 +182,9 @@ DEALINGS IN THE SOFTWARE.
     // request.send(formData);
     console.log('PHP post submitted');
     var savebutton = document.getElementById("save");
-    savebutton.style.opacity="0.25";
+    savebutton.style.opacity = "0.25";
+    savebutton.disabled = true;
+
     // var url = (window.URL || window.webkitURL).createObjectURL(blob);
     // var link = document.getElementById("save");
     // link.href = url;

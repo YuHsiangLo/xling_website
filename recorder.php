@@ -119,21 +119,9 @@ require_once "language/".$_SESSION['lang']."/main.php";
         var user_id = div.innerText.trim();
         var array = errors.innerText.trim();
         array = array.split(",");
+        console.log(array);
         var b_err = document.getElementById("b_err");
         var browserError = b_err.innerText.trim();
-        //TODO: what's the purpose of the following code
-        navigator.permissions.query({name:'microphone'}).then(function(result) {
-            if (result.state == 'granted') {
-
-            } else if (result.state == 'prompt') {
-
-            } else if (result.state == 'denied') {
-
-            }
-            result.onchange = function() {
-
-            };
-        });
     </script>
 </head>
 <body>
@@ -193,12 +181,29 @@ require_once "language/".$_SESSION['lang']."/main.php";
         <div id="viz">
             <canvas id="analyser" width="1000" height="150"></canvas>
             <canvas id="wavedisplay" width="1000" height="150"></canvas>
-            <audio id="recorded-audio" controls="controls"></audio>
+            <div id="audioplayer"></div>
+<!--            <audio id="recorded-audio" controls="controls"></audio>-->
         </div>
         <div id="controls">
             <div id="buttons">
-                <div id="record-div" class="btntext"><a href="#" title="Click to start or stop recording" onclick="toggleRecording(document.getElementById('record'));"><img id="record" src="images/mic128.png" width="70" height="70"><br/><div id="rectext"><?php echo($langar['RecorderRec'])?></div></a></div>
-                <div id="save-div" class="btntext"><a id="save" href="#" onclick="startSubmit(this);"><img src="images/save.svg" width="70" height="70"><br/><?php echo($langar['RecorderSave'])?></a></div>
+                <div id="record-div" class="btntext">
+                    <button id="recordButton" onclick="toggleRecording(document.getElementById('record'));" style="border: none; background-color: transparent;">
+<!--                    <a href="#" title="Click to start or stop recording" onclick="toggleRecording(document.getElementById('record'));">-->
+                        <img id="record" src="images/mic128.png" width="70" height="70">
+                        <br/>
+                        <div id="rectext"><?php echo($langar['RecorderRec'])?></div>
+<!--                    </a>-->
+                    </button>
+                </div>
+                <div id="save-div" class="btntext">
+                    <button id="save" href="#" onclick="startSubmit(this);" style="border: none; background-color: transparent;" disabled>
+<!--                    <a id="save" href="#" onclick="startSubmit(this);">-->
+                        <img src="images/save.svg" width="70" height="70">
+                        <br/>
+                        <?php echo($langar['RecorderSave'])?>
+<!--                    </a>-->
+                    </button>
+                </div>
                 <h4 id="rectime"><time>00:00:00</time></h4>
             </div>
 

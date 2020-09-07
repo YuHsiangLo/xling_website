@@ -40,24 +40,38 @@ function saveAudio() {
     // audioRecorder.exportMonoWAV( doneEncoding );
 }
 
-function gotBuffers( buffers ) {
+function gotBuffers(buffers) {
     var canvas = document.getElementById( "wavedisplay" );
 
-    drawBuffer( canvas.width, canvas.height, canvas.getContext('2d'), buffers[0] );
+    drawBuffer(canvas.width, canvas.height, canvas.getContext('2d'), buffers[0]);
 
-    // the ONLY time gotBuffers is called is right after a new recording is completed - 
+    // the ONLY time gotBuffers is called is right after a new recording is completed -
     // so here's where we should set up the download.
-    audioRecorder.exportWAV( doneEncoding );
+    audioRecorder.exportWAV(doneEncoding);
 }
 
-function doneEncoding( blob ) {
+function doneEncoding(blob) {
     // Recorder.setupDownload( blob, "myRecording" + ((recIndex<10)?"0":"") + recIndex + ".wav" );
     tempblob = blob;
     var url = (window.URL || window.webkitURL).createObjectURL(blob);
-    var playbar = document.getElementById('recorded-audio');
-    playbar.src = url;
+    //var playbar = document.getElementById('recorded-audio');
+    //playbar.src = url;
+
+    var currentAudio = document.createElement('audio');
+    currentAudio.id = 'recorded-audio';
+    currentAudio.controls = true;
+    currentAudio.src = url;
+
+    var audioPlayer = document.getElementById('audioplayer')
+    audioPlayer.appendChild(currentAudio);
+
     var submitbutton = document.getElementById('save');
-    submitbutton.style.opacity="1";
+    submitbutton.style.opacity = "1";
+    submitbutton.disabled = false;
+
+    //var recordButton = document.getElementById('recordButton');
+    //recordButton.disabled = true;
+
     blocksubmit = 0;
     // $("audio#recorded-audio").attr("src", url);
     // $("audio#recorded-audio").get()[0].load();
@@ -67,37 +81,63 @@ function doneEncoding( blob ) {
 
 function startSubmit() {
     if (blocksubmit == 0) {
-    Recorder.setupPhpPost( tempblob, "myRecording" + ((recIndex<10)?"0":"") + recIndex + ".wav", function(progress) {
-    var progresstext = document.getElementById('progresstext');
-    if (progress === 'ended') {
-        progresstext.innerHTML = array[6];
-        return;
-    }
-    progresstext.innerHTML = progress;
-    });
-     
-    blocksubmit = 1;
+        Recorder.setupPhpPost(tempblob, "myRecording" + ((recIndex<10)?"0":"") + recIndex + ".wav", function(progress) {
+            var recordButton = document.getElementById('recordButton');
+            var progresstext = document.getElementById('progresstext');
+            if (progress === 'ended') {
+                recordButton.style.opacity = '1';
+                recordButton.disabled = false;
+                progresstext.innerHTML = array[6];
+                return;
+            }
+            recordButton.style.opacity = '0.25';
+            recordButton.disabled = true;
+            progresstext.innerHTML = progress;
+        });
+
+        blocksubmit = 1;
     }
 }
 
-function toggleRecording( e ) {
+function toggleRecording(e) {
     if (e.classList.contains("recording")) {
         // stop recording
         audioRecorder.stop();
-        recording=false;
+        recording = false;
         e.classList.remove("recording");
-        audioRecorder.getBuffers( gotBuffers );
+        audioRecorder.getBuffers(gotBuffers);
     } else {
         if (audioContext.state === 'suspended') {
-             audioContext.resume();
+            audioContext.resume();
         }
         // start recording
-        if (!audioRecorder)
-            return;
+        if (!audioRecorder) {return;}
+
+        var audioPlayer = document.getElementById("audioplayer");
+        var currentAudio = document.getElementById('recorded-audio');
+
+        // if there is an audio, force stop
+        if (!currentAudio == null) {currentAudio.pause();}
+
+        // remove the audio
+        audioPlayer.innerHTML = '';
+
+        // clear wave display
+        var canvas = document.getElementById('wavedisplay');
+        var context = canvas.getContext('2d');
+        context.clearRect(0, 0, canvas.width, canvas.height);
+
+        var savebutton = document.getElementById('save');
+        savebutton.style.opacity = '0.25';
+        savebutton.disabled = true;
+
+        var progresstext = document.getElementById('progresstext');
+        progresstext.innerHTML = '';
+
         e.classList.add("recording");
         audioRecorder.clear();
         audioRecorder.record();
-        recording=true;
+        recording = true;
     }
 }
 
@@ -126,12 +166,12 @@ function updateAnalysers(time) {
 
     // analyzer draw code here
     {
-        var SPACING = 3;
+        var SPACING = 2;
         var BAR_WIDTH = 1;
         var numBars = Math.round(canvasWidth / SPACING);
         var freqByteData = new Uint8Array(analyserNode.frequencyBinCount);
 
-        analyserNode.getByteFrequencyData(freqByteData); 
+        analyserNode.getByteFrequencyData(freqByteData);
 
         analyserContext.clearRect(0, 0, canvasWidth, canvasHeight);
         analyserContext.fillStyle = '#F6D565';
@@ -157,7 +197,7 @@ function updateAnalysers(time) {
             analyserContext.fillRect(i * SPACING, canvasHeight, BAR_WIDTH, -magnitude);
         }
     }
-    
+
     rafID = window.requestAnimationFrame( updateAnalysers );
 }
 
@@ -210,20 +250,20 @@ function initAudio() {
     if (navigator.mediaDevices.getUserMedia === undefined) {
         navigator.mediaDevices.getUserMedia = function(constraints) {
 
-        // First get ahold of the legacy getUserMedia, if present
-        var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
+            // First get ahold of the legacy getUserMedia, if present
+            var getUserMedia = navigator.webkitGetUserMedia || navigator.mozGetUserMedia;
 
-        // Some browsers just don't implement it - return a rejected promise with an error
-        // to keep a consistent interface
-        if (!getUserMedia) {
-            window.alert(browserError);
-            return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
-        }
+            // Some browsers just don't implement it - return a rejected promise with an error
+            // to keep a consistent interface
+            if (!getUserMedia) {
+                window.alert(browserError);
+                return Promise.reject(new Error('getUserMedia is not implemented in this browser'));
+            }
 
-        // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
-        return new Promise(function(resolve, reject) {
-            getUserMedia.call(navigator, constraints, resolve, reject);
-        });
+            // Otherwise, wrap the call to the old navigator.getUserMedia with a Promise
+            return new Promise(function(resolve, reject) {
+                getUserMedia.call(navigator, constraints, resolve, reject);
+            });
         }
     }
 
@@ -234,13 +274,13 @@ function initAudio() {
         navigator.requestAnimationFrame = navigator.webkitRequestAnimationFrame || navigator.mozRequestAnimationFrame;
 
     navigator.mediaDevices.getUserMedia({"audio": true})
-    .then(function(stream) {
+        .then(function(stream) {
             return gotStream(stream);
-    })
-    .catch(function(e) {
+        })
+        .catch(function(e) {
             alert('Error getting audio');
             console.log(e);
-    });
+        });
 }
 
 

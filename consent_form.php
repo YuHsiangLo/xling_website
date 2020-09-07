@@ -4,7 +4,7 @@ if (!isset($lang) && !($_GET["lang"]) || !in_array(($_GET["lang"]), $allowed)) {
     $lang = 'eng';
 }
 else {
-    $lang = ($_GET["lang"]);
+    $lang = ($_GET['lang']);
 }
 require_once "language/".$lang."/main.php";
 $worker="consent.php?lang=".$lang;
@@ -94,7 +94,8 @@ $consent_text = file_get_contents('language/'.$lang.'/consent.txt');
 <div class="consent_text" data-spy="scroll"><?php echo $consent_text?></div>
 </body>
 <form action=<?php echo($worker); ?> method="post">
-    <div class="participation"><h4><?php echo($langar['ConsentParticipation'])?></h4>
+    <div class="participation">
+        <h4><?php echo($langar['ConsentParticipation'])?></h4>
         <p><?php echo($langar['ConsentParticipationText'])?></p>
         <div>
             <label for="name"><?php echo($langar['ConsentName'])?></label>
@@ -109,12 +110,14 @@ $consent_text = file_get_contents('language/'.$lang.'/consent.txt');
             <?php echo($langar['ConsentParticipationConsent'])?>
         </div>
         <div class="submit">
-            <button type="submit" id="c_button" disabled="true"><?php echo($langar['Submit'])?></button>
+            <button type="submit" id="c_button" disabled><?php echo($langar['Submit'])?></button>
         </div>
     </div>
     <div class="publication">
         <h4><?php echo($langar['ConsentPublication'])?></h4>
-        <p><?php echo($langar['ConsentPublicationText1'].'['.$lang.'-1], ['.$lang.'-2]'.$langar['ConsentPublicationText2']) ?></p>
+        <p>
+            <?php echo($langar['ConsentPublicationText1'].'['.$lang.'-1], ['.$lang.'-2]'.$langar['ConsentPublicationText2']) ?>
+        </p>
         <div class="checkbox">
             <input type="checkbox" name="share_box">
             <?php echo($langar['ConsentPublicationConsent'])?>

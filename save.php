@@ -92,14 +92,7 @@ function selfInvoker()
     //return
 
     // make sure that one can upload only allowed audio/video files
-    $allowed = array(
-        'webm',
-        'wav',
-        'mp4',
-        "mkv",
-        'mp3',
-        'ogg'
-    );
+    $allowed = array('webm', 'wav', 'mp4', 'mkv', 'mp3', 'ogg');
     $extension = pathinfo($filePath, PATHINFO_EXTENSION);
     if (!$extension || empty($extension) || !in_array($extension, $allowed)) {
         error_log('Invalid file extension: '.$extension);
