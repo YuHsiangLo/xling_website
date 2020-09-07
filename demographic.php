@@ -7,12 +7,9 @@ function test_input($data) {
   return $data;
 }
 
-session_start();
-// define variables and set to empty values
-$user = test_input($_SESSION["user_id"]);
-// print("hi ".$user);
+$lang = $_GET['lang'];
+$user_id = $_GET['user_id'];
 $age = $gender = $place_of_birth = $place_of_residence = $l2 = $l3 = $l4 = $l5 = $l6 = "";
-//$language = "eng";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
   $age = test_input($_POST["user_age"]);
@@ -33,9 +30,9 @@ array_walk($demo_full, function(&$a) use ($demo_full) {
 array_shift($demo_full); # remove column header
 
 $myfile = fopen("data/demographic_data.csv", "a") or die("Unable to open file!");
-fwrite($myfile,'"'.$user.'","'.$age.'","'.$gender.'","'.$place_of_birth.'","'.$place_of_residence.'","'.$l2.'","'.$l3.'","'.$l4.'","'.$l5.'","'.$l6.'"'."\n");
+fwrite($myfile,'"'.$user_id.'","'.$age.'","'.$gender.'","'.$place_of_birth.'","'.$place_of_residence.'","'.$l2.'","'.$l3.'","'.$l4.'","'.$l5.'","'.$l6.'"'."\n");
 fclose($myfile);
 
-header('Location: /recorder.php');
+header('Location: recorder.php?lang='.$lang.'&user_id='.$user_id);
 ?>
 

@@ -45,13 +45,8 @@ function generateRandomString($length = 10) {
 }
 
 $user_id = generateRandomString();
-//fwrite($myfile, '"'.$name.'","'.$email.'","'.$language.$curr_code.'","'.$public.'"'."\n");
 fwrite($myfile, '"'.$name.'","'.$email.'","'.$language.'_'.$user_id.'","'.$public.'"'."\n");
 fclose($myfile);
 
-session_start();
-//$_SESSION["user_id"] = $language.$curr_code;
-$_SESSION["user_id"] = $language.'_'.$user_id;
-$_SESSION['lang'] = $language;
-header('Location: demographic_questionnaire.php');
+header('Location: demographic_questionnaire.php?lang='.$language.'&user_id='.$language.'_'.$user_id);
 ?>

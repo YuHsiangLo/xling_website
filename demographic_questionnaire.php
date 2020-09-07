@@ -1,7 +1,10 @@
 <?php
-session_start();
-require_once 'language/'.$_SESSION['lang'].'/main.php';
+$lang = $_GET['lang'];
+$user_id = $_GET['user_id'];
+$extract_data = '/demographic.php?lang='.$lang.'&user_id='.$user_id;
+require_once 'language/'.$lang.'/main.php';
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -77,7 +80,7 @@ require_once 'language/'.$_SESSION['lang'].'/main.php';
     <span class="navbar-brand mb-0 h1"><?php echo($langar['DemoTitle']); ?></span>
 </nav>
 </body>
-<form action="/demographic.php" method="post">
+<form action=<?php echo $extract_data; ?> method="post">
     <div>
         <label for="age"><?php echo($langar['Age']); ?></label>
         <input type="number" id="age" name="user_age" min="0" required>

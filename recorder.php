@@ -1,8 +1,9 @@
 <?php
-session_start();
-$user_id = $_SESSION["user_id"];
-$reading_passage = file_get_contents('language/'.$_SESSION["lang"].'/reading_passage.txt');
-require_once "language/".$_SESSION['lang']."/main.php";
+//session_start();
+$lang = $_GET['lang'];
+$user_id = $_GET['user_id'];
+$reading_passage = file_get_contents('language/'.$lang.'/reading_passage.txt');
+require_once "language/".$lang."/main.php";
 ?>
 
 <!DOCTYPE html>
