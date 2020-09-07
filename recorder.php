@@ -118,8 +118,7 @@ require_once "language/".$_SESSION['lang']."/main.php";
         var errors = document.getElementById("errors");
         var user_id = div.innerText.trim();
         var array = errors.innerText.trim();
-        array = array.split(",");
-        console.log(array);
+        array = array.split(',');
         var b_err = document.getElementById("b_err");
         var browserError = b_err.innerText.trim();
     </script>

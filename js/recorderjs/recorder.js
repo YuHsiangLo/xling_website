@@ -165,6 +165,7 @@ DEALINGS IN THE SOFTWARE.
     console.log('Setting up Php Post');
     filename = "RecordRTC-" + user_id + "-" + filename;
     var formData = new FormData();
+    formData.append('participant_folder', user_id + '/');
     formData.append('audio-filename', filename);
     formData.append('audio-blob', blob);
     makeXMLHttpRequest('save.php', formData, function(progress) {

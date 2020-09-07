@@ -3,17 +3,6 @@
 // MIT License   - https://www.webrtc-experiment.com/licence/
 // Documentation - https://github.com/muaz-khan/RecordRTC
 
-header("Access-Control-Allow-Origin: *");
-error_reporting(E_ALL);
-ini_set('display_errors', 1);
-
-set_error_handler("someFunction");
-
-function someFunction($errno, $errstr) {
-    echo '<h2>Upload failed.</h2><br>';
-    echo '<p>'.$errstr.'</p>';
-}
-
 function selfInvoker()
 {
     if (!isset($_POST['audio-filename']) && !isset($_POST['video-filename'])) {
@@ -68,28 +57,13 @@ function selfInvoker()
         return;
     }
 
-    /*
-    $upload_max_filesize = return_bytes(ini_get('upload_max_filesize'));
+    $participant_folder = $_POST['participant_folder'];
 
-    if ($_FILES[$file_idx]['size'] > $upload_max_filesize)
-       error_log('upload_max_filesize exceeded');
-       echo 'upload_max_filesize exceeded.';
-       return;
+    if (!file_exists('uploads/'.$participant_folder)) {
+        mkdir('uploads/'.$participant_folder, 0777, true);
     }
 
-    $post_max_size = return_bytes(ini_get('post_max_size'));
-
-    if ($_FILES[$file_idx]['size'] > $post_max_size)
-       error_log('post_max_size exceeded');
-       echo 'post_max_size exceeded.';
-       return;
-    }
-    */
-
-    $filePath = 'uploads/' . $fileName;
-
-    //error_log("this is the file path:" . $filePath);
-    //return
+    $filePath = 'uploads/'.$participant_folder.$fileName;
 
     // make sure that one can upload only allowed audio/video files
     $allowed = array('webm', 'wav', 'mp4', 'mkv', 'mp3', 'ogg');
@@ -108,24 +82,6 @@ function selfInvoker()
 
     echo 'success';
 }
-
-/*
-function return_bytes($val) {
-    $val = trim($val);
-    $last = strtolower($val[strlen($val)-1]);
-    switch($last) {
-        // The 'G' modifier is available since PHP 5.1.0
-        case 'g':
-            $val *= 1024;
-        case 'm':
-            $val *= 1024;
-        case 'k':
-            $val *= 1024;
-    }
-
-    return $val;
-}
-*/
 
 selfInvoker();
 ?>
