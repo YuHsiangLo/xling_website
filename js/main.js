@@ -14,28 +14,23 @@
 */
 
 window.AudioContext = window.AudioContext || window.webkitAudioContext;
-
-var audioContext = new AudioContext();
-var audioInput = null,
-    realAudioInput = null,
-    inputPoint = null,
-    audioRecorder = null;
-var rafID = null;
+var gumStream;
+var audioContext;
+var audioInput;
+var realAudioInput;
+var inputPoint;
+var audioRecorder;
+var rafID;
 var analyserContext = null;
+var zeroGain;
 var canvasWidth, canvasHeight;
 var recIndex = 0;
 var tempblob;
 var blocksubmit = 1;
 var recording = false;
 
-/* TODO:
-
-- offer mono option
-- "Monitor input" switch
-*/
-
 function saveAudio() {
-    audioRecorder.exportWAV( doneEncoding );
+    audioRecorder.exportWAV(doneEncoding);
     // could get mono instead by saying
     // audioRecorder.exportMonoWAV( doneEncoding );
 }
@@ -47,7 +42,7 @@ function gotBuffers(buffers) {
 
     // the ONLY time gotBuffers is called is right after a new recording is completed -
     // so here's where we should set up the download.
-    audioRecorder.exportWAV(doneEncoding);
+    audioRecorder.exportMonoWAV(doneEncoding);
 }
 
 function doneEncoding(blob) {
@@ -103,16 +98,12 @@ function toggleRecording(e) {
     if (e.classList.contains("recording")) {
         // stop recording
         audioRecorder.stop();
+        audioContext.close();
+        gumStream.getAudioTracks()[0].stop();
         recording = false;
         e.classList.remove("recording");
         audioRecorder.getBuffers(gotBuffers);
     } else {
-        if (audioContext.state === 'suspended') {
-            audioContext.resume();
-        }
-        // start recording
-        if (!audioRecorder) {return;}
-
         var audioPlayer = document.getElementById("audioplayer");
         var currentAudio = document.getElementById('recorded-audio');
 
@@ -135,8 +126,8 @@ function toggleRecording(e) {
         progresstext.innerHTML = '';
 
         e.classList.add("recording");
-        audioRecorder.clear();
-        audioRecorder.record();
+
+        startRecording();
         recording = true;
     }
 }
@@ -214,39 +205,15 @@ function toggleMono() {
     audioInput.connect(inputPoint);
 }
 
-function gotStream(stream) {
-    inputPoint = audioContext.createGain();
-
-    // Create an AudioNode from the stream.
-    realAudioInput = audioContext.createMediaStreamSource(stream);
-    audioInput = realAudioInput;
-    audioInput.connect(inputPoint);
-
-//    audioInput = convertToMono( input );
-
-    analyserNode = audioContext.createAnalyser();
-    analyserNode.fftSize = 2048;
-    inputPoint.connect( analyserNode );
-
-    audioRecorder = new Recorder( inputPoint );
-
-    zeroGain = audioContext.createGain();
-    zeroGain.gain.value = 0.0;
-    inputPoint.connect( zeroGain );
-    zeroGain.connect( audioContext.destination );
-    updateAnalysers();
-}
-
-function initAudio() {
+function startRecording() {
     // Older browsers might not implement mediaDevices at all, so we set an empty object first
     if (navigator.mediaDevices === undefined) {
         navigator.mediaDevices = {};
     }
 
-// Some browsers partially implement mediaDevices. We can't just assign an object
-// with getUserMedia as it would overwrite existing properties.
-// Here, we will just add the getUserMedia property if it's missing.
-
+    // Some browsers partially implement mediaDevices. We can't just assign an object
+    // with getUserMedia as it would overwrite existing properties.
+    // Here, we will just add the getUserMedia property if it's missing.
     if (navigator.mediaDevices.getUserMedia === undefined) {
         navigator.mediaDevices.getUserMedia = function(constraints) {
 
@@ -267,22 +234,30 @@ function initAudio() {
         }
     }
 
+    navigator.mediaDevices.getUserMedia({audio: true, video: false}).then(function(stream) {
+        audioContext = new AudioContext();
+        inputPoint = audioContext.createGain();
+        realAudioInput = audioContext.createMediaStreamSource(stream);
+        audioInput = realAudioInput;
+        audioInput.connect(inputPoint);
+        gumStream = stream;
+        analyserNode = audioContext.createAnalyser();
+        analyserNode.fftSize = 2048;
+        inputPoint.connect(analyserNode);
 
-    if (!navigator.cancelAnimationFrame)
-        navigator.cancelAnimationFrame = navigator.webkitCancelAnimationFrame || navigator.mozCancelAnimationFrame;
-    if (!navigator.requestAnimationFrame)
-        navigator.requestAnimationFrame = navigator.webkitRequestAnimationFrame || navigator.mozRequestAnimationFrame;
+        audioRecorder = new Recorder(inputPoint, {numChannels: 1});
 
-    navigator.mediaDevices.getUserMedia({"audio": true})
-        .then(function(stream) {
-            return gotStream(stream);
-        })
-        .catch(function(e) {
+        zeroGain = audioContext.createGain();
+        zeroGain.gain.value = 0.0;
+        inputPoint.connect(zeroGain);
+        zeroGain.connect(audioContext.destination);
+        updateAnalysers();
+        audioRecorder.clear();
+        audioRecorder.record();
+        }).catch(function(e) {
             alert('Error getting audio');
             console.log(e);
         });
+
+
 }
-
-
-
-window.addEventListener('load', initAudio );
