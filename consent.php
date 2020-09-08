@@ -44,9 +44,11 @@ function generateRandomString($length = 10) {
     return $randomString;
 }
 
-$user_id = generateRandomString();
-fwrite($myfile, '"'.$name.'","'.$email.'","'.$language.'_'.$user_id.'","'.$public.'"'."\n");
+$today = date("Ymd");
+$user_random_identifier = generateRandomString();
+$user_id = $language.'_'.$today.'_'.$user_random_identifier;
+fwrite($myfile, '"'.$name.'","'.$email.'","'.$user_id.'","'.$public.'"'."\n");
 fclose($myfile);
 
-header('Location: demographic_questionnaire.php?lang='.$language.'&user_id='.$language.'_'.$user_id);
+header('Location: demographic_questionnaire.php?lang='.$language.'&user_id='.$user_id);
 ?>
