@@ -141,7 +141,7 @@ require_once "language/".$lang."/main.php";
                         </h4>
                     </div>
                     <div id="collapse1" class="panel-collapse collapse in">
-                        <div class="panel-body"> <?php echo($langar['RecorderInstructions'])?></div>
+                        <div class="panel-body"><?php echo($langar['RecorderInstructions'])?></div>
                     </div>
                 </div>
                 <div class="panel panel-default">
@@ -250,7 +250,7 @@ require_once "language/".$lang."/main.php";
     start.onclick = function() {
         if (recording_in_progress) {
             clearTimeout(t);
-            h1.textContent = "00:00:00";
+            h1.textContent = '00:00:00';
             seconds = 0;
             minutes = 0;
             hours = 0;

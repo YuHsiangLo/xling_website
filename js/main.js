@@ -76,7 +76,7 @@ function doneEncoding(blob) {
 
 function startSubmit() {
     if (blocksubmit == 0) {
-        Recorder.setupPhpPost(tempblob, "myRecording" + ((recIndex<10)?"0":"") + recIndex + ".wav", function(progress) {
+        Recorder.setupPhpPost(tempblob, function(progress) {
             var recordButton = document.getElementById('recordButton');
             var progresstext = document.getElementById('progresstext');
             if (progress === 'ended') {

@@ -19,18 +19,18 @@ function selfInvoker()
     }
 
     // do NOT allow third party audio uploads
-    if (isset($_POST['audio-filename']) && strrpos($_POST['audio-filename'], "RecordRTC-") !== 0) {
-        error_log ('Audio File name must start with RecordRTC-, filename is '.$_POST['audio-filename']);
-        echo 'File name must start with "RecordRTC-"';
-        return;
-    }
+    //if (isset($_POST['audio-filename']) && strrpos($_POST['audio-filename'], "RecordRTC-") !== 0) {
+    //    error_log ('Audio File name must start with RecordRTC-, filename is '.$_POST['audio-filename']);
+    //    echo 'File name must start with "RecordRTC-"';
+    //    return;
+    //}
 
     // do NOT allow third party video uploads
-    if (isset($_POST['video-filename']) && strrpos($_POST['video-filename'], "RecordRTC-") !== 0) {
-        error_log ('Video File name must start with RecordRTC-');
-        echo 'File name must start with "RecordRTC-"';
-        return;
-    }
+    //if (isset($_POST['video-filename']) && strrpos($_POST['video-filename'], "RecordRTC-") !== 0) {
+    //    error_log ('Video File name must start with RecordRTC-');
+    //    echo 'File name must start with "RecordRTC-"';
+    //    return;
+    //}
 
     $fileName = '';
     $tempName = '';

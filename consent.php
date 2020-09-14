@@ -34,7 +34,7 @@ if (sizeof($consent_full) == 0) {
 }
 
 //from: https://stackoverflow.com/questions/4356289/php-random-string-generator
-function generateRandomString($length = 10) {
+function generateRandomString($length = 3) {
     $characters = '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ';
     $charactersLength = strlen($characters);
     $randomString = '';
