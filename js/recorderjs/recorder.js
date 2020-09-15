@@ -159,11 +159,14 @@ DEALINGS IN THE SOFTWARE.
     link.download = filename || 'output.wav';
   }
 
-  Recorder.setupPhpPost  = function(blob, filename, callback){
-    var d = new Date();
-    var filename = (d.getTime()).toString() + ".wav";
+  Recorder.setupPhpPost  = function(blob, callback){
+    var date = new Date();
+    var hour = date.getHours().toString();
+    var minute = date.getMinutes().toString();
+    var second = date.getSeconds().toString();
+    var timestamp = hour + '-' + minute + '-' + second;
     console.log('Setting up Php Post');
-    filename = "RecordRTC-" + user_id + "-" + filename;
+    var filename = user_id + '_' + timestamp + '.wav';
     var formData = new FormData();
     formData.append('participant_folder', user_id + '/');
     formData.append('audio-filename', filename);
