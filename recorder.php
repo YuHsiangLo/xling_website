@@ -154,16 +154,24 @@ require_once "language/".$lang."/main.php";
                         <div class="panel-body"> <?php echo($langar['RecorderTest'])?></div>
                     </div>
                 </div>
-                <div class="panel panel-default">
-                    <div class="panel-heading">
-                        <h4 class="panel-title">
-                            <a data-toggle="collapse" data-parent="#accordion" href="#collapse2"><?php echo($langar['RecorderReadingTitle'])?></a>
-                        </h4>
-                    </div>
-                    <div id="collapse2" class="panel-collapse collapse">
-                        <div class="panel-body"><?php echo $reading_passage ?></div>
-                    </div>
-                </div>
+                <?php
+                    if ($langar['RecorderReadingTitle']) {
+                        echo "<div class=\"panel panel-default\">",
+                        "<div class=\"panel-heading\">",
+                        "<h4 class=\"panel-title\">",
+                        "<a data-toggle=\"collapse\" data-parent=\"#accordion\" href=\"#collapse2\">",
+                            $langar['RecorderReadingTitle'],
+                        "</a>",
+                        "</h4>",
+                        "</div>",
+                        "<div id=\"collapse2\" class=\"panel-collapse collapse\">",
+                        "<div class=\"panel-body\">",
+                        $reading_passage,
+                        "</div>",
+                        "</div>",
+                        "</div>";
+                    }
+                ?>
                 <div class="panel panel-default">
                     <div class="panel-heading">
                         <h4 class="panel-title">
