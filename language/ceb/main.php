@@ -1,7 +1,14 @@
 <?php
-    $langar = array(
+$langar = array(
     "IndexTitle" => "Ang Proyekto sa Crossling Corpora ",
-    "IndexText" => "Welcome, ug salamat sa imong interes sa Crossling Corpora!<br><br>Gidapit ka namo sa pag-apil aning among pagtuon pinaagi sa pagtampo sa usa ka koleksyon sa mga pagrekord sa lainlaing sinultian. Kining mga rekording makatabang sa among pagsabot kung giunsa pagbag-o sa mga sinultian sa paglabay sa panahon, kung unsa ang kalahian sa  mga sinultian sa usag usa bahin sa mga gagmay nga detalye sa paglitok, ug kung giunsa pagrepresentar ug pagproseso sa utok ang paglitok. Kung nakahukom ka nga muapil ani nga pagtuon, hangyuon ka nga mutubag sa pipila ka mga pangutana bahin sa imong kaugalingon, irekord ang imong kaugalingon nga nagbasa og mubo nga tudling sa cebuano, ug pagstorya og bisan unsa sa parehas nga sinultian sulod sa pipila ka mga minuto. Ang pulong moabot og mga lima hantod unom ka minuto kung basahon og kusog. Para sa pagsulti og bisan unsa, hangyuon ka nga mostorya sa dili moubos sa lima ka minuto ug dili mulabaw sa napulo ka minuto.<br><br> Palihog tuploka ang button sa ubos kung muapil ka saamong pagtuon",
+    "IndexText" =>
+        "Welcome, ug salamat sa imong interes sa Crossling Corpora!
+        <br>
+        <br>
+        Gidapit ka namo sa pag-apil aning among pagtuon pinaagi sa pagtampo sa usa ka koleksyon sa mga pagrekord sa lainlaing sinultian. Kining mga rekording makatabang sa among pagsabot kung giunsa pagbag-o sa mga sinultian sa paglabay sa panahon, kung unsa ang kalahian sa  mga sinultian sa usag usa bahin sa mga gagmay nga detalye sa paglitok, ug kung giunsa pagrepresentar ug pagproseso sa utok ang paglitok. Kung nakahukom ka nga muapil ani nga pagtuon, hangyuon ka nga mutubag sa pipila ka mga pangutana bahin sa imong kaugalingon, irekord ang imong kaugalingon nga nagbasa og mubo nga tudling sa cebuano, ug pagstorya og bisan unsa sa parehas nga sinultian sulod sa pipila ka mga minuto. Ang pulong moabot og mga lima hantod unom ka minuto kung basahon og kusog. Para sa pagsulti og bisan unsa, hangyuon ka nga mostorya sa dili moubos sa lima ka minuto ug dili mulabaw sa napulo ka minuto.
+        <br>
+        <br>
+        Palihog tuploka ang button sa ubos kung muapil ka saamong pagtuon",
     "IndexLink" => "Muapil sa pagtuon.",
     "ConsentTitle" => "Porma sa pag-uyon: Pagtuon sa pagbag-o sa tingog nga koleksyon sa lainlain nga sinultian",
     "ConsentParticipation" => "1. Pag-uyon sa pag-apil",
@@ -23,34 +30,51 @@
     "Next" => "Sunod nga panid",
     "RecorderTitle" => "Rekording tool",
     "RecorderInstructionsTitle" => "Mga panudlo ",
-    "RecorderInstructions" => " Makit-an ang rekording tool sa tuo nga bahin (o sa ubos kung mogamit ka ug cellphone). Ang nasa taas nga Rekording window gipakita ang lebel sa tingog. Ang ubos nga Rekording window ipakita ang waveform sa girekord kung mahuman na. Ang ilawom sa duwa ka window kay ang Playback Control, icon sa Mikropono, ug ang Submit icon. Para irekord ang kaugalingon, i-klik ang icon sa Mikropono (kini mosiga og pula), basaha og kusog ang pulong, dayon i-klik og usab ang icon sa Mikropono aron mahuman ang pagrekord. Ipakita dayon sa ubos nga window ang imong rekording isip usa ka waveform. Ang pag-klik sa Play button sa Playback Control magtugot kanimo nga madunggan ang imong rekording. 
-<ol>
-<li>Palihog sulayi ang pagrekord pinaagi sa pagklik sa button sa Mikropono, pagsulti sa pipila ka mga tudling-pulong, ug i-klik og usab ang button. Mahimo nimong mapaminaw ang pagsulay nga rekording sa Playback window. Kung klaro nimo nga madunggan ang imong kaugalingon ug walay kasaba sa background, mahimo nimong i-klik og usab ang button sa Mikropono (nga dili kinahanglan i-sumite ang gisulay nga rekording) ug magsugod na storya og kusog. <strong>Ayaw isumite kung dili pa human ang rekording.</strong></li>
-<li>Dayon i-klik ang pagsulti og bisan unsa na tab ug magsugod sa pagrekord sa imong pagbasa. Kung mosiga og pula, maayo ka nang magsugod sa pagbasa. Paghuman sa imong pag-rekord, i-klik ang button sa Mikropono para mahunong ang pagrekord. Unya, i-klik ang button sa tudling pagbasa para moadto sa sunod na parte. </li>
-</ol> Paningkamutan namo nga maka-access  kamo pinaagi sa daghang mga plataporma ug browser kutob sa mahimo. Kung ang imong browser walay mahimo ka makakuha og usa ka mensahe sa pagablis sa panid sa recorder. Palihog sulayi ang uban pang browser kung aduna kay magamit. <strong>Dili molihok kining website kung maablihan gamit ug browser sa mga instant messaging service, palihug pagsulay sa lainlain nga browser.</strong><br><br> Interisado kami sa imong natural nga sinultihan. Kung mamali ka sa usa ka pulong, dili nimo kinahanglan nga i-restart an pagrekord. Balika lang ang tudling-pulong parehas sa usa ka normal nga panag-istoryahay. Ang rekording window gipangita ang imong tingog pagkahuman sa imong pagrekord. Palihog og basa sa sakto nga kaapspason kung asa ka komportable. Dili na kinahanglan magpraktis bag-o magrekord. Mahimo nang isarado kining window. Kung ang imong rekording masumite nga dili tinuyo bag-o pa mahuman, mag-rekord ng bag-o ug padayon hangtud sa kinutuban.",
-        "RecorderReadingTitle" => " Bahin sa pagbasa: Ang Kaayuhan sa Pag-hiking",
-        "RecorderSpontaneous" => " Pagsulti og Bisan Unsa",
-        "RecorderList" => "<h4>Mahimo nimong magamit ang mosunud nga bahin kung gusto nimo, o pagsulti og lain nga hisgot kung gusto nimo. Ikaw ang magdesisyon kung unsa imong hisgutan, apan gusto namo nga likayan nimo ang mga hisgutan nga mahimong sensitibo o kontrobersyal gikan sa mga relihiyoso / political / rasa / sekswal nga panan-aw. Gusto usab namo nga likayan nimo ang pagpadayag sa personal nga pagpaila sa kasayuran sama sa imong ngalan, adres, lugar sa trabaho ug uban pa. <br> Ang rekording kinahanglan nga 5-8 minuto ang gitas-on. Kung handa na ka nang mag-rekord, i-klik ang button sa Mikropono ug sugod nga sa pagsulti. Kung human na ka mag-rekord, i-klik ang button sa Mikropono para mahunong ang pagrekord, ug i-klik ang i-sumite nga button.</h4>
-    <ul>
-    <li>Ingna kami sa imong mga kalingawan</li>
-    <li>Unsa man ang imong mga pangandoy sa pagkabata?</li>
-    <li>Unsa imong adlaw-adlaw nga rutina?</li>
-    <li>Isulti kanamo ang usa ka malipayon nga panghitabo sa imong kinabuhi.</li>
-    <li>Unsa para kanimo ang hinungdanon sa pagkab-ot sa kalipayan?</li>
-    <li>Ihulagway ang imong naandan sa katapusan sa semana.</li>
-    <li>Unsa imong trabaho? Giunsa kini paglihok?</li>
-    <li>Unsa ang pinakamaayong nabuhat sa imong kinabuhi? Giunsa kini pagkaapekto sa imong kinabuhi?</li>
-    <li>Unsa ang pinakamapuslanon nga tambag nga imong nahatag?</li>
-    <li>Isulti kanamo bahin ang imong pinalabi nga libro o salida.</li>
-    <li>Nagustuhan nimo ang pag-iskwela? Unsa imong pinakamaayo/pinaka dili mayo nga hisgutan?</li>
+    "RecorderInstructions" =>
+        "Makit-an ang rekording tool sa tuo nga bahin (o sa ubos kung mogamit ka ug cellphone). Ang nasa taas nga Rekording window gipakita ang lebel sa tingog. Ang ubos nga Rekording window ipakita ang waveform sa girekord kung mahuman na. Ang ilawom sa duwa ka window kay ang Playback Control, icon sa Mikropono, ug ang Submit icon. Para irekord ang kaugalingon, i-klik ang icon sa Mikropono (kini mosiga og pula), basaha og kusog ang pulong, dayon i-klik og usab ang icon sa Mikropono aron mahuman ang pagrekord. Ipakita dayon sa ubos nga window ang imong rekording isip usa ka waveform. Ang pag-klik sa Play button sa Playback Control magtugot kanimo nga madunggan ang imong rekording.
+        <ol>
+            <li>Palihog sulayi ang pagrekord pinaagi sa pagklik sa button sa Mikropono, pagsulti sa pipila ka mga tudling-pulong, ug i-klik og usab ang button. Mahimo nimong mapaminaw ang pagsulay nga rekording sa Playback window. Kung klaro nimo nga madunggan ang imong kaugalingon ug walay kasaba sa background, mahimo nimong i-klik og usab ang button sa Mikropono (nga dili kinahanglan i-sumite ang gisulay nga rekording) ug magsugod na storya og kusog. <strong>Ayaw isumite kung dili pa human ang rekording.</strong></li>
+            <li>Dayon i-klik ang pagsulti og bisan unsa na tab ug magsugod sa pagrekord sa imong pagbasa. Kung mosiga og pula, maayo ka nang magsugod sa pagbasa. Paghuman sa imong pag-rekord, i-klik ang button sa Mikropono para mahunong ang pagrekord. Unya, i-klik ang button sa tudling pagbasa para moadto sa sunod na parte.</li>
+        </ol>
+        Paningkamutan namo nga maka-access  kamo pinaagi sa daghang mga plataporma ug browser kutob sa mahimo. Kung ang imong browser walay mahimo ka makakuha og usa ka mensahe sa pagablis sa panid sa recorder. Palihog sulayi ang uban pang browser kung aduna kay magamit. <strong>Dili molihok kining website kung maablihan gamit ug browser sa mga instant messaging service, palihug pagsulay sa lainlain nga browser.</strong>
+        <br>
+        <br>
+        Interisado kami sa imong natural nga sinultihan. Kung mamali ka sa usa ka pulong, dili nimo kinahanglan nga i-restart an pagrekord. Balika lang ang tudling-pulong parehas sa usa ka normal nga panag-istoryahay. Ang rekording window gipangita ang imong tingog pagkahuman sa imong pagrekord. Palihog og basa sa sakto nga kaapspason kung asa ka komportable. Dili na kinahanglan magpraktis bag-o magrekord. Mahimo nang isarado kining window. Kung ang imong rekording masumite nga dili tinuyo bag-o pa mahuman, mag-rekord ng bag-o ug padayon hangtud sa kinutuban.",
+    "RecorderTestTitle" => "Sample nga rekording",
+    "RecorderTest" =>
+        "<ol>
+            <li>Palihug bago kamo mag-rekord nga i-testing ang rekorder. I-klik ang button sa mikropono, kung mosiga og pula, maayo ka ng mag-testing. Pagkahuman mo mag-testing, i-klik ulit ang button sa mikropono. Makit-an na nimo kung nag-rekord ang imong tingog sa playback window. Siguruha nga mayo ang imong pamati sa imong tingog ug wala'y kasaba nga tunog. <strong>Ayaw isumiter kining sample nga rekording.</strong></li>
+            <li>I-klik ang \"Bahin sa Pagbasa\" nga tab. Sunod, i-klik ang button sa mikropono ug kung mosiga na og pula, maayo ka ng pagsugod sa pagbasa. Kung human na kamong magbasa, i-klik ang button sa mikropono para mahunong ang pag-rekord, ug i-klik ang sumiter nga button. Sunod, i-klik ang \"Pagsulti sa Bisan Unsa\" nga tab para sa pag-rekord sa ikaduha nga parte.</li>
+        </ol>",
+    "RecorderReadingTitle" => " Bahin sa pagbasa: Ang Kaayuhan sa Pag-hiking",
+    "RecorderSpontaneous" => " Pagsulti og Bisan Unsa",
+    "RecorderList" =>
+        "<h4>
+            Mahimo nimong magamit ang mosunud nga bahin kung gusto nimo, o pagsulti og lain nga hisgot kung gusto nimo. Ikaw ang magdesisyon kung unsa imong hisgutan, apan gusto namo nga likayan nimo ang mga hisgutan nga mahimong sensitibo o kontrobersyal gikan sa mga relihiyoso / political / rasa / sekswal nga panan-aw. Gusto usab namo nga likayan nimo ang pagpadayag sa personal nga pagpaila sa kasayuran sama sa imong ngalan, adres, lugar sa trabaho ug uban pa.
+            <br>
+            Ang rekording kinahanglan nga 5-8 minuto ang gitas-on. Kung handa na ka nang mag-rekord, i-klik ang button sa Mikropono ug sugod nga sa pagsulti. Kung human na ka mag-rekord, i-klik ang button sa Mikropono para mahunong ang pagrekord, ug i-klik ang i-sumite nga button.
+        </h4>
+        <ul>
+            <li>Ingna kami sa imong mga kalingawan</li>
+            <li>Unsa man ang imong mga pangandoy sa pagkabata?</li>
+            <li>Unsa imong adlaw-adlaw nga rutina?</li>
+            <li>Isulti kanamo ang usa ka malipayon nga panghitabo sa imong kinabuhi.</li>
+            <li>Unsa para kanimo ang hinungdanon sa pagkab-ot sa kalipayan?</li>
+            <li>Ihulagway ang imong naandan sa katapusan sa semana.</li>
+            <li>Unsa imong trabaho? Giunsa kini paglihok?</li>
+            <li>Unsa ang pinakamaayong nabuhat sa imong kinabuhi? Giunsa kini pagkaapekto sa imong kinabuhi?</li>
+            <li>Unsa ang pinakamapuslanon nga tambag nga imong nahatag?</li>
+            <li>Isulti kanamo bahin ang imong pinalabi nga libro o salida.</li>
+            <li>Nagustuhan nimo ang pag-iskwela? Unsa imong pinakamaayo/pinaka dili mayo nga hisgutan?</li>
         </ul>
-<h4> Sa dihang gisumite na nimo ang imong rekording sa tudling pagbasa, gihangyo namo nga irekord nimo ang imong kaugalingon gasulti og bisan unsa tali sa lima hangtod sa walo ka minute. Kung mahuman na ka, palihog og pasa sa rekording.</h4>",
+        <h4>
+            Sa dihang gisumite na nimo ang imong rekording sa tudling pagbasa, gihangyo namo nga irekord nimo ang imong kaugalingon gasulti og bisan unsa tali sa lima hangtod sa walo ka minute. Kung mahuman na ka, palihog og pasa sa rekording.
+        </h4>",
     "RecorderRec" => "Sugdon/Undangon ang Pagrekord ",
     "RecorderSave" => "I-sumite ang rekording ",
     "RecorderClose" => "Isarado ang Recorder ",
     "RecorderNotYet" => "",
     "array" => "Nagsugod sa pag-upload..., Nahitabo ang pag-upload , Mahuman na ang lag-upload, Pag-andam sa URL File, Dili pa na-upload sa serber, Nahunong ang pag-upload, Nahuman na ang upload",
-    "b_err" => "Pasensya pero dili molihok sa kini nga browser ang Web Audio API. Dili molihok ang online rekorder. Palihug pag-upgrade ang imong browser o pagsulay sa lainlain nga browser. ",
-
+    "b_err" => "Pasensya pero dili molihok sa kini nga browser ang Web Audio API. Dili molihok ang online rekorder. Palihug pag-upgrade ang imong browser o pagsulay sa lainlain nga browser.",
     );
 ?>
