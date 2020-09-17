@@ -104,7 +104,7 @@ function toggleRecording(e) {
         e.classList.remove("recording");
         audioRecorder.getBuffers(gotBuffers);
     } else {
-        var audioPlayer = document.getElementById("audioplayer");
+        var audioPlayer = document.getElementById('audioplayer');
         var currentAudio = document.getElementById('recorded-audio');
 
         // if there is an audio, force stop

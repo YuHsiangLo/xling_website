@@ -9,106 +9,49 @@ require_once 'language/'.$lang.'/main.php';
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <title>Demographic questionnaire</title>
-    <link rel="stylesheet" href="/bootstrap/css/bootstrap.min.css">
-    <script src="/bootstrap/js/bootstrap.min.js"></script>
-    <script src="/bootstrap/js/jquery.min.js"></script>
-    <style>
-        form {
-            /* Just to center the form on the page */
-            margin: 0 auto;
-            width: 40%;
-            /* To see the outline of the form */
-            padding: 1em;
-            border: 1px solid #CCC;
-            border-radius: 1em;
-        }
-
-        form div + div {
-            margin-top: 1em;
-        }
-
-        label {
-            /* To make sure that all labels have the same size and are properly aligned */
-            display: inline-block;
-            width: 30%;
-            text-align: right;
-        }
-
-        input, textarea {
-            /* To make sure that all text fields have the same font settings
-               By default, textareas have a monospace font */
-            font: 1em sans-serif;
-
-            /* To give the same size to all text fields */
-            width: 65%;
-            box-sizing: border-box;
-
-            /* To harmonize the look & feel of text field border */
-            border: 1px solid #999;
-        }
-
-        input:focus, textarea:focus {
-            /* To give a little highlight on active elements */
-            border-color: #000;
-        }
-
-        textarea {
-            /* To properly align multiline text fields with their labels */
-            vertical-align: top;
-
-            /* To give enough room to type some text */
-            height: 5em;
-        }
-
-        .button {
-            /* To position the buttons to the same position of the text fields */
-            padding-left: 90px; /* same size as the label elements */
-        }
-
-        button {
-            /* This extra margin represent roughly the same space as the space
-               between the labels and their text fields */
-            margin-left: .5em;
-        }
-
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-primary bg-primary">
-    <span class="navbar-brand mb-0 h1"><?php echo($langar['DemoTitle']); ?></span>
+<nav class="navbar navbar-dark bg-primary">
+    <span class="navbar-brand m-1 h1"><?php echo($langar['DemoTitle']); ?></span>
 </nav>
-</body>
-<form action=<?php echo $extract_data; ?> method="post">
-    <div>
-        <label for="age"><?php echo($langar['Age']); ?></label>
-        <input type="number" id="age" name="user_age" min="0" required>
+<br>
+<form class="w-50 mx-auto" action="<?php echo $extract_data; ?>" method="post">
+    <div class="form-row">
+        <div class="form-group col-md-6">
+            <label for="age"><?php echo($langar['Age']); ?></label>
+            <input type="number" class="form-control" id="age" name="user_age" min="0" required>
+        </div>
+        <div class="form-group col-md-6">
+            <label for="gender"><?php echo($langar['Gender']); ?></label>
+            <input type="text" class="form-control" id="gender" name="user_gender" required>
+        </div>
     </div>
-    <div>
-        <label for="gender"><?php echo($langar['Gender']); ?></label>
-        <input type="text" id="gender" name="user_gender" required>
-    </div>
-    <div>
+    <div class="form-group">
         <label for="pob"><?php echo($langar['PoB']); ?></label>
-        <input type="text" id="pob" name="user_pob" required>
+        <input type="text" class="form-control" id="pob" name="user_pob" required>
     </div>
-    <div>
+    <div class="form-group">
         <label for="cpor"><?php echo($langar['Location']); ?></label>
-        <input type="text" id="cpor" name="user_cpor" required>
+        <input type="text" class="form-control" id="cpor" name="user_cpor" required>
     </div>
-    <div class=text-center>
-        <fieldset>
-            <legend><?php echo($langar['SpokenLanguages']); ?></legend>
-            <input type="text" name="user_l2"><br>
-            <input type="text" name="user_l3"><br>
-            <input type="text" name="user_l4"><br>
-            <input type="text" name="user_l5"><br>
-            <input type="text" name="user_l6">
-        </fieldset>
+    <div class="form-group">
+        <label><?php echo($langar['SpokenLanguages']); ?></label>
+        <input type="text" class="form-control m-0" name="user_l2">
+        <input type="text" class="form-control m-0" name="user_l3">
+        <input type="text" class="form-control" name="user_l4">
+        <input type="text" class="form-control" name="user_l5">
+        <input type="text" class="form-control" name="user_l6">
     </div>
-    <div class="button">
-        <button type="submit"><?php echo($langar['Next']); ?></button>
+    <div class="text-center">
+        <button type="submit" class="btn btn-primary">
+            <?php echo($langar['Next']); ?>
+        </button>
     </div>
 </form>
+</body>
 </html>

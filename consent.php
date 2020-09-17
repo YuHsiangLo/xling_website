@@ -2,14 +2,14 @@
 // define functions
 
 function test_input($data) {
-    $data = trim($data);
-    $data = stripslashes($data);
-    $data = htmlspecialchars($data);
+    //$data = trim($data);
+    //$data = stripslashes($data);
+    //$data = htmlspecialchars($data);
     return $data;
 }
 
 // define variables and set to empty values
-$name = $email = $code = $public = "";
+//$name = $email = $code = $public = "";
 
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $name = test_input($_POST["user_name"]);

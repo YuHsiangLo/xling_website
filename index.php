@@ -3,29 +3,26 @@
 <head>
     <meta charset="UTF-8">
     <title>Xling</title>
-    <link rel="stylesheet" href="bootstrap/css/bootstrap.min.css">
-    <script src="bootstrap/js/bootstrap.min.js"></script>
-    <script src="bootstrap/js/jquery.min.js"></script>
-    <style>
-        h4{
-            margin: 0 auto;
-            margin-top: 3%;
-            padding: 10px;
-            width: 40%;
-            border: 1px solid #CCC;
-            border-radius: 1em ;
-            text-align: center;
-        }
-    </style>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 </head>
 <body>
-<nav class="navbar navbar-primary bg-primary">
-    <span class="navbar-brand mb-0 h1">Xling</span>
+<nav class="navbar navbar-dark bg-primary">
+    <span class="navbar-brand m-1 h1">Xling</span>
 </nav>
-<h4><a class=button href='welcome.php?lang=eng'>English</a></h4>
-<h4><a class=button href='welcome.php?lang=ceb'>Cebuano</a></h4>
-<h4><a class=button href='welcome.php?lang=pam'>Kapampangan</a></h4>
-<h4><a class=button href='welcome.php?lang=fra'>Francais</a></h4>
-<h4><a class=button href='welcome.php?lang=acf'>Francais Acadien</a></h4>
+<br>
+<div class="text-center">
+    <a href="welcome.php?lang=eng" class="btn btn-outline-secondary btn-lg m-3" role="button" style="width: 250px;">English</a>
+    <br>
+    <a href="welcome.php?lang=ceb" class="btn btn-outline-secondary btn-lg m-3" role="button" style="width: 250px;">Cebuano</a>
+    <br>
+    <a href="welcome.php?lang=pam" class="btn btn-outline-secondary btn-lg m-3" role="button" style="width: 250px;">Kapampangan</a>
+    <br>
+    <a href="welcome.php?lang=fra" class="btn btn-outline-secondary btn-lg m-3" role="button" style="width: 250px;">Francais</a>
+    <br>
+    <a href="welcome.php?lang=acf" class="btn btn-outline-secondary btn-lg m-3" role="button" style="width: 250px;">Francais Acadien</a>
+</div>
 </body>
 </html>
