@@ -24,13 +24,18 @@ require_once "language/".$lang."/main.php";
             background: #202020;
             width: 95%;
             height: 50%;
-            box-shadow: 0 0 10px blue;
+            box-shadow: 0 0 10px #007bff;
         }
         #record.recording {
             background: red;
             background: -webkit-radial-gradient(center, ellipse cover, #ff0000 0%, lightgrey 75%, lightgrey 100%, #7db9e8 100%);
             background: -moz-radial-gradient(center, ellipse cover, #ff0000 0%, lightgrey 75%, lightgrey 100%, #7db9e8 100%);
             background: radial-gradient(center, ellipse cover, #ff0000 0%, lightgrey 75%, lightgrey 100%, #7db9e8 100%);
+        }
+        h5 {
+            color: #007bff;
+            margin-top: 1em;
+            margin-bottom: 1em;
         }
     </style>
 </head>
@@ -104,11 +109,11 @@ require_once "language/".$lang."/main.php";
             </div>
             <br>
             <button id="recordButton" class="btn bg-transparent p-0 mx-3">
-                <img id="record" src="images/mic128.png" width="75px" height="75px">
+                <img id="record" src="images/mic128.png" width="50px" height="50px">
                 <div id="rectext" style="max-width: 100px; white-space: normal"><?php echo($langar['RecorderRec']); ?></div>
             </button>
             <button id="save" type="button" class="btn bg-transparent p-0 mx-3" onclick="startSubmit(this);" disabled>
-                <img id="save" src="images/save.svg" width="75px" height="75px">
+                <img id="save" src="images/save.svg" width="50px" height="50px">
                 <div style="max-width: 100px; white-space: normal"><?php echo($langar['RecorderSave']); ?></div>
             </button>
             <br>

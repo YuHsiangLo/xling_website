@@ -49,11 +49,11 @@ $langar = array(
     "RecorderReadingTitle" => " Bahin sa pagbasa: Ang Kaayuhan sa Pag-hiking",
     "RecorderSpontaneous" => " Pagsulti og Bisan Unsa",
     "RecorderList" =>
-        "<h4>
+        "<h5>
             Mahimo nimong magamit ang mosunud nga bahin kung gusto nimo, o pagsulti og lain nga hisgot kung gusto nimo. Ikaw ang magdesisyon kung unsa imong hisgutan, apan gusto namo nga likayan nimo ang mga hisgutan nga mahimong sensitibo o kontrobersyal gikan sa mga relihiyoso / political / rasa / sekswal nga panan-aw. Gusto usab namo nga likayan nimo ang pagpadayag sa personal nga pagpaila sa kasayuran sama sa imong ngalan, adres, lugar sa trabaho ug uban pa.
             <br>
             Ang rekording kinahanglan nga 5-8 minuto ang gitas-on. Kung handa na ka nang mag-rekord, i-klik ang button sa Mikropono ug sugod nga sa pagsulti. Kung human na ka mag-rekord, i-klik ang button sa Mikropono para mahunong ang pagrekord, ug i-klik ang i-sumite nga button.
-        </h4>
+        </h5>
         <ul>
             <li>Ingna kami sa imong mga kalingawan</li>
             <li>Unsa man ang imong mga pangandoy sa pagkabata?</li>
@@ -67,9 +67,9 @@ $langar = array(
             <li>Isulti kanamo bahin ang imong pinalabi nga libro o salida.</li>
             <li>Nagustuhan nimo ang pag-iskwela? Unsa imong pinakamaayo/pinaka dili mayo nga hisgutan?</li>
         </ul>
-        <h4>
+        <h5>
             Sa dihang gisumite na nimo ang imong rekording sa tudling pagbasa, gihangyo namo nga irekord nimo ang imong kaugalingon gasulti og bisan unsa tali sa lima hangtod sa walo ka minute. Kung mahuman na ka, palihog og pasa sa rekording.
-        </h4>",
+        </h5>",
     "RecorderRec" => "Sugdon/Undangon ang Pagrekord ",
     "RecorderSave" => "I-sumite ang rekording ",
     "RecorderClose" => "Isarado ang Recorder ",

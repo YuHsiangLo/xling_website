@@ -1,38 +1,59 @@
 <?php
-    $langar = array(
-        "IndexTitle" => "Crossling Corpora",
-        "IndexText" => "<strong>Bienvenue! Nous vous remercions de votre intérêt pour le projet Crossling Corpora!</strong><br><br>Nous vous invitons à participer à une collecte de données comportant des enregistrements vocaux dans plusieurs langues. Ces enregistrements serviront à mieux comprendre comment les langues changent au fil du temps, quelles sont les différences d'une langue à l'autre en termes de prononciation, et plus globalement, de quelle façon le langage est représenté et traité par le cerveau. Si vous choisissez de participer à ce projet, il vous sera demandé de répondre à quelques questions à votre propos, puis de vous enregistrer en train de parler librement dans la même langue. Pour la section libre, nous demandons un enregistrement long d’au moins 5 minutes mais n'excédant pas les 10 minutes. <br><br>Cliquez sur le bouton ci-dessous pour commencer.",
-        "IndexLink" => "Participer au projet.",
-        "ConsentTitle" => "Etes-vous consentant?",
-        "ConsentParticipation" => "1. Consentement à la participation",
-        "ConsentParticipationText" => "Si vous consentez à participer à ce projet, veuillez taper votre nom complet ainsi que votre adresse E-mail et cocher la case “Je consens à participer”. Votre consentement autorise l’utilisation de vos enregistrements vocaux une fois anonymisés, le partage de ces données avec d’autres chercheurs via un site de recherche privé, ainsi que la publication de vos réponses anonymes au questionnaire démographique.",
-        "ConsentName" => "Nom:",
-        "ConsentEmail" => "E-mail:",
-        "ConsentParticipationConsent" => "Je consens à participer.",
-        "ConsentPublication" => "2. Consentement à la publication d'extraits de vos enregistrements",
-        "ConsentPublicationText1" => "Si vous l’autorisez, des extraits de vos enregistrements pourront être utilisés dans le cadre de présentations publiques des résultats de nos recherches. Votre nom ne sera jamais associé publiquement à ces enregistrements. Vous serez identifié.e par un code tel: ",
-        "ConsentPublicationText2" => ", etc. Si vous consentez à cet usage de vos données, veuillez cocher la case ci-dessous. Si tel n’est pas le cas, assurez vous qu’elle ne soit pas cochée.",
-        "ConsentPublicationConsent" => "Je consens à ce que des extraits de mes enregistrements soient publiés. (Optionnel)",
-        "Submit" => "Je consens.",
-        "DemoTitle" => "Questionnaire Démographique",
-        "Age" => "Âge:",
-        "Gender" => "Genre:",
-        "PoB" => "Lieu de naissance:",
-        "Location" => "Lieu de résidence:",
-        "SpokenLanguages" => "Autres langues que vous parlez couramment:",
-        "Next" => "Suivant",
-        "RecorderTitle" => "Enregistrements vocaux",
-        "RecorderInstructionsTitle" => "Instructions",
-        "RecorderInstructions" => "Le panel d'enregistrement se trouve à droite (ou ci-dessous, en version mobile). La fenêtre du haut vous permet de visualiser le volume du son enregistré. Celle du dessous montrera l’enregistrement le plus récent. En dessous, se trouvent un lecteur média, un bouton “Lancer/Arrêter l’enregistrement”, et un bouton “Envoyer l'Enregistrement”. Pour commencer un enregistrement, cliquez sur l'icône du micro (qui sera alors surlignée en rouge), enregistrez-vous, puis cliquez à nouveau sur le micro pour arrêter l’enregistrement. Cet enregistrement sera alors visible dans la fenêtre du dessous. Cliquez sur le bouton “Play” du lecteur média si vous souhaitez écouter votre enregistrement.
-            <ol>
+$langar = array(
+    "IndexTitle" => "Crossling Corpora",
+    "IndexText" =>
+        "<strong>Bienvenue! Nous vous remercions de votre intérêt pour le projet Crossling Corpora!</strong>
+        <br>
+        <br>
+        Nous vous invitons à participer à une collecte de données comportant des enregistrements vocaux dans plusieurs langues. Ces enregistrements serviront à mieux comprendre comment les langues changent au fil du temps, quelles sont les différences d'une langue à l'autre en termes de prononciation, et plus globalement, de quelle façon le langage est représenté et traité par le cerveau. Si vous choisissez de participer à ce projet, il vous sera demandé de répondre à quelques questions à votre propos, puis de vous enregistrer en train de parler librement dans la même langue. Pour la section libre, nous demandons un enregistrement long d’au moins 5 minutes mais n'excédant pas les 10 minutes.
+        <br>
+        <br>
+        Cliquez sur le bouton ci-dessous pour commencer.",
+    "IndexLink" => "Participer au projet.",
+    "ConsentTitle" => "Etes-vous consentant?",
+    "ConsentParticipation" => "1. Consentement à la participation",
+    "ConsentParticipationText" => "Si vous consentez à participer à ce projet, veuillez taper votre nom complet ainsi que votre adresse E-mail et cocher la case “Je consens à participer”. Votre consentement autorise l’utilisation de vos enregistrements vocaux une fois anonymisés, le partage de ces données avec d’autres chercheurs via un site de recherche privé, ainsi que la publication de vos réponses anonymes au questionnaire démographique.",
+    "ConsentName" => "Nom:",
+    "ConsentEmail" => "E-mail:",
+    "ConsentParticipationConsent" => "Je consens à participer.",
+    "ConsentPublication" => "2. Consentement à la publication d'extraits de vos enregistrements",
+    "ConsentPublicationText1" => "Si vous l’autorisez, des extraits de vos enregistrements pourront être utilisés dans le cadre de présentations publiques des résultats de nos recherches. Votre nom ne sera jamais associé publiquement à ces enregistrements. Vous serez identifié.e par un code tel: ",
+    "ConsentPublicationText2" => ", etc. Si vous consentez à cet usage de vos données, veuillez cocher la case ci-dessous. Si tel n’est pas le cas, assurez vous qu’elle ne soit pas cochée.",
+    "ConsentPublicationConsent" => "Je consens à ce que des extraits de mes enregistrements soient publiés. (Optionnel)",
+    "Submit" => "Je consens.",
+    "DemoTitle" => "Questionnaire Démographique",
+    "Age" => "Âge:",
+    "Gender" => "Genre:",
+    "PoB" => "Lieu de naissance:",
+    "Location" => "Lieu de résidence:",
+    "SpokenLanguages" => "Autres langues que vous parlez couramment:",
+    "Next" => "Suivant",
+    "RecorderTitle" => "Enregistrements vocaux",
+    "RecorderInstructionsTitle" => "Instructions",
+    "RecorderInstructions" =>
+        "Le panel d'enregistrement se trouve à droite (ou ci-dessous, en version mobile). La fenêtre du haut vous permet de visualiser le volume du son enregistré. Celle du dessous montrera l’enregistrement le plus récent. En dessous, se trouvent un lecteur média, un bouton “Lancer/Arrêter l’enregistrement”, et un bouton “Envoyer l'Enregistrement”. Pour commencer un enregistrement, cliquez sur l'icône du micro (qui sera alors surlignée en rouge), enregistrez-vous, puis cliquez à nouveau sur le micro pour arrêter l’enregistrement. Cet enregistrement sera alors visible dans la fenêtre du dessous. Cliquez sur le bouton “Play” du lecteur média si vous souhaitez écouter votre enregistrement.
+        <ol>
             <li>Veuillez lancer un enregistrement test en cliquant sur le micro. S’il est rouge, dites ce qui vous passe par la tête, puis cliquez à nouveau sur le micro. Vous pouvez écoutez cet enregistrement en cliquant sur “Play”. Assurez-vous que votre voix soit audible et qu’il n’y ait pas de bruits dérangeant dans le fond. <strong>N’envoyez pas cet enregistrement test.</strong></li>
-            <li> Veuillez cliquer sur l’onglet 'Enregistrement libre' pour la suite des instructions. </li>
-            </ol> Nous faisons de notre mieux pour que cet outil soit accessible depuis un maximum de plateformes et navigateurs web. Si votre navigateur n’est pas compatible, il se peut que vous receviez un message d’erreur. Veuillez essayer avec un autre navigateur web ou un autre appareil si vous y avez accès. <strong>Cette page ne fonctionne pas avec le navigateur intégré de certains services de messagerie instantanée, veuillez utiliser un autre navigateur.</strong><br><br>Parlez comme si vous étiez entrain de discuter normalement avec vos collègues ou amis. Ne vous souciez pas de parler de façon “correcte”, nous sommes intéressés par la façon dont vous parlez habituellement. Si vous faites une erreur, ce n'est pas nécessaire de recommencer! Corrigez simplement l’erreur à l’oral comme vous le feriez dans le cadre d’une conversation. Il n’est pas nécessaire de vous exercer avant d’entamer un enregistrement. Si jamais votre enregistrement est incomplet, ou s'il est envoyé prématurément, veuillez lancer un nouvel enregistrement et aller jusqu'au bout.",
-        "RecorderSpontaneous" => "Enregistrement libre",
-        "RecorderList" => "<h4><br>Vous pouvez vous inspirer des suggestions suivantes, ou parlez de ce qu'il vous plait. Le choix est le vôtre; cependant, nous demandons que vous évitiez les sujets qui peuvent être sensibles ou controversés que ce soit religieusement, politiquement, ou concernant l’ethnicité ou la sexualité. Faites également attention à ne pas révéler d’informations personnelles telles que votre nom, adresse, ou lieu de travail car celles-ci devront être supprimées de votre enregistrement pour des raisons de confidentialité.<br>
-Votre enregistrement devrait durer entre 5 et 8 minutes. Quand vous vous sentez prêt, cliquez sur le micro et commencez l'enregistrement. Lorsque vous aurez fini, cliquez à nouveau sur le micro afin de terminer l'enregistrement, puis envoyez le à l'aide du bouton à cet effet.
-</h4>
-            <ul>
+            <li>Veuillez cliquer sur l’onglet 'Enregistrement libre' pour la suite des instructions.</li>
+        </ol>
+        Nous faisons de notre mieux pour que cet outil soit accessible depuis un maximum de plateformes et navigateurs web. Si votre navigateur n’est pas compatible, il se peut que vous receviez un message d’erreur. Veuillez essayer avec un autre navigateur web ou un autre appareil si vous y avez accès. <strong>Cette page ne fonctionne pas avec le navigateur intégré de certains services de messagerie instantanée, veuillez utiliser un autre navigateur.</strong><br><br>Parlez comme si vous étiez entrain de discuter normalement avec vos collègues ou amis. Ne vous souciez pas de parler de façon “correcte”, nous sommes intéressés par la façon dont vous parlez habituellement. Si vous faites une erreur, ce n'est pas nécessaire de recommencer! Corrigez simplement l’erreur à l’oral comme vous le feriez dans le cadre d’une conversation. Il n’est pas nécessaire de vous exercer avant d’entamer un enregistrement. Si jamais votre enregistrement est incomplet, ou s'il est envoyé prématurément, veuillez lancer un nouvel enregistrement et aller jusqu'au bout.",
+    // ===== Translation needed =====
+    "RecorderTestTitle" => "Test recording",
+    "RecorderTest" =>
+        "<ol>
+            <li>Please test the recording by clicking the microphone button. It will glow red. Speak a few sentences, and click the button again. You can listen to the test recording in the playback window. Make sure you can hear yourself clearly and there are no noises in the background. <strong>Do not submit this test recording.</strong></li>
+            <li>Click the 'Reading Sample' tab and start recording by clicking the microphone button once again. When it glows red, you can start reading out loud. When you are done, click on the microphone button to end the recording, and submit your recording. Then click on the 'Spontaneous speech prompts' tab for instructions about the second recording. </li>
+        </ol>",
+    // ==========
+    "RecorderSpontaneous" => "Enregistrement libre",
+    "RecorderList" =>
+        "<h5>
+        Vous pouvez vous inspirer des suggestions suivantes, ou parlez de ce qu'il vous plait. Le choix est le vôtre; cependant, nous demandons que vous évitiez les sujets qui peuvent être sensibles ou controversés que ce soit religieusement, politiquement, ou concernant l’ethnicité ou la sexualité. Faites également attention à ne pas révéler d’informations personnelles telles que votre nom, adresse, ou lieu de travail car celles-ci devront être supprimées de votre enregistrement pour des raisons de confidentialité.
+        <br>
+        <br>
+        Votre enregistrement devrait durer entre 5 et 8 minutes. Quand vous vous sentez prêt, cliquez sur le micro et commencez l'enregistrement. Lorsque vous aurez fini, cliquez à nouveau sur le micro afin de terminer l'enregistrement, puis envoyez le à l'aide du bouton à cet effet.
+        </h5>
+        <ul>
             <li>Parlez nous de vos passe-temps.</li>
             <li>Quel était votre rêve d’enfant?</li>
             <li>Comment vous préparez-vous le matin?</li>
@@ -44,14 +65,14 @@ Votre enregistrement devrait durer entre 5 et 8 minutes. Quand vous vous sentez 
             <li>Quel est le meilleur conseil que vous ayez recu?</li>
             <li>Parlez de votre œuvre préférée (livre, film, jeu vidéo...).</li>
             <li>Aimiez-vous l'école? Quels étaient vos meilleurs/pires cours?</li>
-            </ul>
-        <h4>Merci de votre participation!</h4>",
-        "RecorderRec" => "Lancer/Arrêter l’enregistrement",
-        "RecorderSave" => "Envoyer l’enregistrement",
-        "RecorderClose" => "Close Recorder",
-        "RecorderNotYet" => "",
-        "array" => "Upload commencé..., Upload en cours , progress-about-to-end, Création de l'URL du fichier.., échec de l'upload, Upload annulé., Upload Réussi",
-        "b_err" => "Web Audio API n'est pas supporté par votre navigateur. La page d'enregistrement ne pourra donc pas fonctionner. Veuillez essayer avec un autre navigateur web ou un autre appareil si vous y avez accès.",
+        </ul>
+        <h5>Merci de votre participation!</h5>",
+    "RecorderRec" => "Lancer/Arrêter l’enregistrement",
+    "RecorderSave" => "Envoyer l’enregistrement",
+    "RecorderClose" => "Close Recorder",
+    "RecorderNotYet" => "",
+    "array" => "Upload commencé..., Upload en cours , progress-about-to-end, Création de l'URL du fichier.., échec de l'upload, Upload annulé., Upload Réussi",
+    "b_err" => "Web Audio API n'est pas supporté par votre navigateur. La page d'enregistrement ne pourra donc pas fonctionner. Veuillez essayer avec un autre navigateur web ou un autre appareil si vous y avez accès.",
 
-    );
+);
 ?>
