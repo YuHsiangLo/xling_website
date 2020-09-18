@@ -13,8 +13,8 @@ $langar = array(
     "ConsentTitle" => "Kapaintulutan: Pananaliksik keng pagbayu ning tunug keng malating korporang cross-linguistika",
     "ConsentParticipation" => "1. Kapaintulutan para makyabe keng pananaliksik",
     "ConsentParticipationText" => "Kung bisa kayung makyabe keng pananaliksik na ini, paki-type ing lagyu ampo e-mail address niyu kareng kaun keng lalam, tapus paki-tsek ing kaun. Kaibat niyeng ibiye ing permisu niyu, puwedi mi lang gamitan deng speech rekording niyu keng database mi, puwedi reng gamitan deng aliwang mananaliksik deng rekording niyu keng metung a website na closed-registration, ampo puwedi mi lang i-publish deng resulta na ning surbey niyu. Ali ya miyugne ing lagyu o kontakto niyu kareng speech rekording niyu.",
-    "ConsentName" => "Lagyu:",
-    "ConsentEmail" => "Email:",
+    "ConsentName" => "Lagyu",
+    "ConsentEmail" => "Email",
     "ConsentParticipationConsent" => "Bisa kung makyabe keng pananaliksik",
     "ConsentPublication" => "2. Kapaintulutan para i-publish aliwaliwang parte da reng rekording",
     "ConsentPublicationText1" => "Kung ibiye niye ing permisu niyu, puwedi mi lang pakit keng publiko deng aliwaliwang parte da reng rekording niyu. Ali ya miyugne ing lagyu niyu kareng rekording na gewa niyu. Imbis na lagyu niyu, dinan da kayung ID, kunwari, ",
@@ -22,11 +22,11 @@ $langar = array(
     "ConsentPublicationConsent" => "Bibiye keng ing permisu ku para i-publish parte da reng rekording ku (Opsyonal)",
     "Submit" => "I-submit",
     "DemoTitle" => "Impormasyung Demograpik",
-    "Age" => "Idad:",
-    "Gender" => "Kasarian:",
-    "PoB" => "Lugar ning Pangabait:",
-    "Location" => "Tuknangnan o siyudad:",
-    "SpokenLanguages" => "Aliwang lenguahi na balu niyung gamitan:",
+    "Age" => "Idad",
+    "Gender" => "Kasarian",
+    "PoB" => "Lugar ning Pangabait",
+    "Location" => "Tuknangnan o siyudad",
+    "SpokenLanguages" => "Aliwang lenguahi na balu niyung gamitan",
     "Next" => "Susunud na pahina",
     "RecorderTitle" => "Gamit a Pang-rekord",
     "RecorderInstructionsTitle" => "Instruksyon",
@@ -40,14 +40,12 @@ $langar = array(
 		<br>
 		<br>
 		Interesado kami keng natural a pagsasalita niyu. Kung magkamali o magkabuknul-buknul kayu kabang magsalita, ali niyu kailangang ulitan ing buong rekording. Paki-ulit niye mu ing parte kung nokarin kay megkasakit. Potang magsalita kayu, isipan niyu mu na pakisabyan niye ing kaluguran o kamaganak niyu. Dapat komportable kayu, ali niyu kailangan magensayu o praktis bayu mag-rekord.",
-    // ===== Translation needed =====
-    "RecorderTestTitle" => "Test recording",
+    "RecorderTestTitle" => "Test rekording",
     "RecorderTest" =>
         "<ol>
-            <li>Please test the recording by clicking the microphone button. It will glow red. Speak a few sentences, and click the button again. You can listen to the test recording in the playback window. Make sure you can hear yourself clearly and there are no noises in the background. <strong>Do not submit this test recording.</strong></li>
-            <li>Click the 'Reading Sample' tab and start recording by clicking the microphone button once again. When it glows red, you can start reading out loud. When you are done, click on the microphone button to end the recording, and submit your recording. Then click on the 'Spontaneous speech prompts' tab for instructions about the second recording. </li>
+            <li>Paki-test ing rekording gamit ing microphone boton. Dapat magka-kule yang malutu. Magsalita kayung ditak, tapus paki-click ye ing microphone boton ulit. Pwedi yeng pakiramdaman ing test rekording keng playback window. Paki-siguraduang daramdaman yeng masalese ing sarili yu ampong alang mainge keng rekording. <strong>Ali ye i-submit ing test rekording.</strong></li>
+            <li>Paki-click ing 'Pangunaing Texto' tapus paki-click ing microphone para magumpisang mag-rekord. Potang megka-kule neng malutu ing microphone, pwedi na kayung magsalita. Kaibat yeng ayari ing texto, paki-click ye ulit ing microphone para i-tuknang ing rekording, tapus i-submit ye ing rekording yu. Kaibat yeng a-submit, paki-click ing 'Kuwentuan' para keng instruksyon tungkul keng pangadwang rekording.</li>
         </ol>",
-    // ==========
     "RecorderReadingTitle" => "Pangunaing Texto: Ing Benepisyu ning Hiking",
     "RecorderSpontaneous" => "kuwentuan",
     "RecorderList" =>

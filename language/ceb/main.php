@@ -12,9 +12,9 @@ $langar = array(
     "IndexLink" => "Muapil sa pagtuon.",
     "ConsentTitle" => "Porma sa pag-uyon: Pagtuon sa pagbag-o sa tingog nga koleksyon sa lainlain nga sinultian",
     "ConsentParticipation" => "1. Pag-uyon sa pag-apil",
-    "ConsentParticipationText" => "Kung mouyon ka nga moapil sa pagtuon, i-type ang imong pangalan ug email address sa mga box sa ubos ug i-klik ang “Mouyon ko sa pag-apil”. Ang pag-apil naglakip sa imong rekording sa among database, ang pagpaambit niini sa ubang mga tigdukiduki pinaagi sa usa ka website mga kailangan og pag-rehistro, ug pagpatik sa imong mga resulta sa pagsusi.",
-    "ConsentName" => " Pangalan:",
-    "ConsentEmail" => "Email:",
+    "ConsentParticipationText" => "Kung mouyon ka nga moapil sa pagtuon, i-type ang imong pangalan ug email address sa mga box sa ubos ug i-klik ang \"Mouyon ko sa pag-apil\". Ang pag-apil naglakip sa imong rekording sa among database, ang pagpaambit niini sa ubang mga tigdukiduki pinaagi sa usa ka website mga kailangan og pag-rehistro, ug pagpatik sa imong mga resulta sa pagsusi.",
+    "ConsentName" => " Pangalan",
+    "ConsentEmail" => "Email",
     "ConsentParticipationConsent" => " Mouyon ko sa pag-apil.",
     "ConsentPublication" => "2. Pag-uyon sa pagpatik sa mga kinutlo gikan sa mga rekording",
     "ConsentPublicationText1" => "Kung muoyon ka, ang mga kinutlo gikan sa imong mga pagrekord mahimong ipakigbahin sa publiko sa sa pagrepresentar sa mga resulta gikan sa among database. Sa tanan nga mga kaso, dili namo iupod ang inong pangalan sa mga rekording. Ikaw mahimo nga tawgan og, sa pananglitan, ",
@@ -22,11 +22,11 @@ $langar = array(
     "ConsentPublicationConsent" => "Muoyon ko nga i-patik ang mga tinuko sa akong mga rekording. (Opsyonal)",
     "Submit" => "Pag-uyon",
     "DemoTitle" => " Ang mga pangutana sa demograpiko",
-    "Age" => "Edad:",
-    "Gender" => "Kinatawhan:",
-    "PoB" => "Lugar nga natawhan:",
-    "Location" => "Puy-anan karon:",
-    "SpokenLanguages" => " Ubang sinultian nga matulin ka:",
+    "Age" => "Edad",
+    "Gender" => "Kinatawhan",
+    "PoB" => "Lugar nga natawhan",
+    "Location" => "Puy-anan karon",
+    "SpokenLanguages" => " Ubang sinultian nga matulin ka",
     "Next" => "Sunod nga panid",
     "RecorderTitle" => "Rekording tool",
     "RecorderInstructionsTitle" => "Mga panudlo ",
@@ -46,8 +46,8 @@ $langar = array(
             <li>Palihug bago kamo mag-rekord nga i-testing ang rekorder. I-klik ang button sa mikropono, kung mosiga og pula, maayo ka ng mag-testing. Pagkahuman mo mag-testing, i-klik ulit ang button sa mikropono. Makit-an na nimo kung nag-rekord ang imong tingog sa playback window. Siguruha nga mayo ang imong pamati sa imong tingog ug wala'y kasaba nga tunog. <strong>Ayaw isumiter kining sample nga rekording.</strong></li>
             <li>I-klik ang \"Bahin sa Pagbasa\" nga tab. Sunod, i-klik ang button sa mikropono ug kung mosiga na og pula, maayo ka ng pagsugod sa pagbasa. Kung human na kamong magbasa, i-klik ang button sa mikropono para mahunong ang pag-rekord, ug i-klik ang sumiter nga button. Sunod, i-klik ang \"Pagsulti sa Bisan Unsa\" nga tab para sa pag-rekord sa ikaduha nga parte.</li>
         </ol>",
-    "RecorderReadingTitle" => " Bahin sa pagbasa: Ang Kaayuhan sa Pag-hiking",
-    "RecorderSpontaneous" => " Pagsulti og Bisan Unsa",
+    "RecorderReadingTitle" => "Bahin sa pagbasa: Ang Kaayuhan sa Pag-hiking",
+    "RecorderSpontaneous" => "Pagsulti og Bisan Unsa",
     "RecorderList" =>
         "<h5>
             Mahimo nimong magamit ang mosunud nga bahin kung gusto nimo, o pagsulti og lain nga hisgot kung gusto nimo. Ikaw ang magdesisyon kung unsa imong hisgutan, apan gusto namo nga likayan nimo ang mga hisgutan nga mahimong sensitibo o kontrobersyal gikan sa mga relihiyoso / political / rasa / sekswal nga panan-aw. Gusto usab namo nga likayan nimo ang pagpadayag sa personal nga pagpaila sa kasayuran sama sa imong ngalan, adres, lugar sa trabaho ug uban pa.
